@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox_text {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.custom_checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D5E3F0;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+    /* создание галки */
+.custom_checkbox::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("Vector 2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.checkbox:checked + .custom_checkbox::before {
+    opacity: 1;
+}
+
+.checkbox:not(:checked):not(:disabled) + .custom_checkbox:hover::before {
+    opacity: 0.3;
+}
+
+.checkbox:focus + .custom_checkbox {
+    box-shadow: 0 0 4px 1px rgba(0, 102, 175, 0.60);
+}
+
+.checkbox:disabled + .custom_checkbox {
+    outline-color: red;
+}
+
+

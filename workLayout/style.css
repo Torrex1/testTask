@@ -1,0 +1,124 @@
+:root {
+    --title-color: #1B334D;
+}
+
+@font-face {
+    font-family: 'Rosnou';
+    src: url("fonts/Rosnou.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    background-color: #f6f6f6;
+
+    font-family: Rosnou, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 52em;
+    padding: 24px;
+    gap: 24px;
+
+    background-color: #fff;
+
+    border-radius: 7px;
+}
+
+.period {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    padding-right: 24px;
+    gap: 4px;
+
+    border-right: 1px solid #D5E3F0;
+}
+.period span:first-child {
+    color: var(--title-color, #1B334D);
+}
+
+.period span:last-child {
+    color: #ABBCD1;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.description span:first-child {
+    color: var(--title-color, #1B334D);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.description > ul {
+    color: #1B334D;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.edit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 4px;
+
+    cursor: pointer;
+}
+
+    /* медиа-запросы*/
+@media screen and (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .period {
+        border: none;
+        width: auto;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+    .description span:first-child {
+        font-size: 16px;
+    }
+
+    .edit-btn {
+        display: flex;
+        width: 30px;
+        align-self: flex-end;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .period{
+        width: 13em;
+    }
+    .period span:first-child {
+        font-size: 16px;
+    }
+    .description > ul {
+        font-size: 12px;
+    }
+}
+
