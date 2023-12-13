@@ -48,8 +48,18 @@
     box-shadow: 0 0 4px 1px rgba(0, 102, 175, 0.60);
 }
 
-.checkbox:disabled + .custom_checkbox {
-    outline-color: red;
+.checkbox-error + .custom_checkbox{
+    border-color: #EC6A71;
+}
+
+.checkbox-error_text {
+    color: red;
+}
+
+.checkbox-disabled + .custom_checkbox {
+    border-radius: 4px;
+    border: 1px solid #ABBCD1;
+    background: #D5E3F0;
 }
 
 

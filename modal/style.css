@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: Rosnou, sans-serif;
+}
+
+@font-face {
+    font-family: 'Rosnou';
+    src: url("../fonts/Rosnou.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.modal-btn {
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal--visible {
+    display: block;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ececec;
+}
+
+.fields {
+    border-radius: 10px;
+    width: 34em;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    background-color: #fff;
+}
+
+.fields > h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #3D5B7C;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field > select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #D5E3F0;
+    font-size: 16px;
+}
+
+.generated-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subtitle-style {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #3D5B7C;
+    text-transform: uppercase;
+}
+
+#achieve {
+    color: #1B334D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.inputField-style {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    padding: 8px 16px;
+
+    border-radius: 8px;
+    border: 1px solid #D5E3F0;
+    font-size: 16px;
+}
+
+.inputDate-style {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputDate-style > input {
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #D5E3F0;
+    font-size: 16px;
+    color: #adc1d5;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.modalBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 16px;
+    align-items: flex-start;
+}
+
+.modalBtn > button {
+    display: flex;
+    height: 40px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    border-radius: 8px;
+    border: 1px solid #D5E3F0;
+    cursor: pointer;
+}
+.modalBtn > button:last-child {
+    background-color: #2699D4;
+    color: #ffffff;
+}
+
+.startup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.textArea-style {
+    display: flex;
+    padding: 8px 16px;
+    width: 100%;
+    height: 120px;
+    resize: none;
+
+    border-radius: 8px;
+    border: 1px solid #D5E3F0;
+    color: #ABBCD1;
+    font-size: 16px;
+    font-weight: 400;
+}
+
